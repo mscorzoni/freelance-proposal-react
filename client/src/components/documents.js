@@ -25,7 +25,7 @@ class Documents extends Component {
 
   render() {
     return (
-            <div className="Lists-container">
+            <div className="container">
               {this.state.freelance_documents.map( freelance_document => {
                 return(
                   <div className="card" key={freelance_document.id}>
@@ -36,7 +36,7 @@ class Documents extends Component {
                       <div>
                         <a className="btn btn-lg btn-primary" href={freelance_document.file_url}>Download File</a>
                       </div>
-                      <p className="cart-text"><small className="text-muted">{freelance_document.updated_at}</small></p>
+                      <p className="cart-text"><small className="text-muted">Last updated: {freelance_document.updated_at }</small></p>
                     </div>
                   </div>
                   )

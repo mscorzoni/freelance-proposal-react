@@ -5,7 +5,7 @@ module Api::V1
 
     # GET /freelance_documents
     def index
-      @freelance_documents = FreelanceDocument.all
+      @freelance_documents = FreelanceDocument.order('created_at DESC')
 
       render json: @freelance_documents
     end
