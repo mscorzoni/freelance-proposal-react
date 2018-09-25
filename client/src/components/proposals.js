@@ -3,6 +3,7 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProposalList from './proposal-list'
 import Proposal from './proposal'
+import './proposal.css'
 
 class Proposals extends Component {
   constructor(props){
@@ -28,11 +29,11 @@ class Proposals extends Component {
 
   render() {
     return (
-        <div>
+        <div className="container">
+          <Proposal proposal={this.state.selectedProposal} />
           <ProposalList 
             onProposalSelect={selectedProposal => this.setState({selectedProposal})}
             proposals={this.state.proposals} />
-          <Proposal proposal={this.state.selectedProposal} />
         </div>
         )
   }

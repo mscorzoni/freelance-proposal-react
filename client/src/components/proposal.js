@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './proposal.css'
 
 
 
@@ -11,8 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
     return(
 
-      <div className="container">
-            <div className="card proposal-card" key={proposal.id}>
+      <div>
+            <div className="card proposal-card col-md-8 float-left" key={proposal.id}>
               <a href={proposal.path}><h1>{proposal.customer}</h1></a>
               <div>
 
