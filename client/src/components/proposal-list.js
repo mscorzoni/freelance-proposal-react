@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './proposal.css'
 
 
 
+
 const ProposalList = ({proposals, onProposalSelect}) => {
 
-    // const proposalId = proposal.id.proposalId;
+    
 
     return (
             <div>
-              <div className="list-group col-md-4 float-right card-list">
+              <div className="list-group card-list">
                 <a className="list-group-item list-group-item-action active">
                   <h1 className="headline">Proposals</h1>
                 </a>

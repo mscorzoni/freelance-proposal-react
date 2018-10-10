@@ -5,6 +5,7 @@ import ProposalList from './proposal-list'
 import Proposal from './proposal'
 import './proposal.css'
 
+
 class Proposals extends Component {
   constructor(props){
     super(props)
@@ -30,10 +31,16 @@ class Proposals extends Component {
   render() {
     return (
         <div className="container">
-          <Proposal proposal={this.state.selectedProposal} />
-          <ProposalList 
-            onProposalSelect={selectedProposal => this.setState({selectedProposal})}
-            proposals={this.state.proposals} />
+          <div className="row">
+            <div className="col-md-8 float-left">
+              <Proposal proposal={this.state.selectedProposal} />
+            </div>
+            <div className="col-md-4 float-right">
+              <ProposalList 
+                onProposalSelect={selectedProposal => this.setState({selectedProposal})}
+                proposals={this.state.proposals} />
+            </div>
+           </div>
         </div>
         )
   }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './proposal.css'
 
@@ -8,12 +8,11 @@ import './proposal.css'
     if(!proposal) {
       return <div>Loading... </div>
     }
-    const proposalId = proposal.id.proposalId;
 
     return(
 
       <div>
-            <div className="card proposal-card col-md-8 float-left" key={proposal.id}>
+            <div className="card proposal-card" key={proposal.id}>
               <a href={proposal.path}><h1>{proposal.customer}</h1></a>
               <div>
 

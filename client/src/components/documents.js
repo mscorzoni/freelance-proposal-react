@@ -29,7 +29,7 @@ class Documents extends Component {
               {this.state.freelance_documents.map( freelance_document => {
                 return(
                   <div className="card" key={freelance_document.id}>
-                    <img className="card-img-top" src={freelance_document.image_url} alt="Card image cap" width="100%" />
+                    <img className="card-img-top" src={freelance_document.image_url} alt="Card cap" width="100%" />
                     <div className="card-block">
                       <h4 className="card-title">{freelance_document.title}</h4>
                       <p className="card-text">{freelance_document.description}</p>
