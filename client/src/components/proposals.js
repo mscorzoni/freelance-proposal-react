@@ -31,16 +31,11 @@ class Proposals extends Component {
   render() {
     return (
         <div className="container">
-          <div className="row">
-            <div className="col-md-8 float-left">
-              <Proposal proposal={this.state.selectedProposal} />
-            </div>
-            <div className="col-md-4 float-right">
+            <div>
               <ProposalList 
                 onProposalSelect={selectedProposal => this.setState({selectedProposal})}
                 proposals={this.state.proposals} />
             </div>
-           </div>
         </div>
         )
   }

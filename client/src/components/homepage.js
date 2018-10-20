@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './proposal.css';
 
@@ -19,10 +20,10 @@ export default class Homepage extends Component {
           <ul className='nav'>
             <li className='nav-item'>
 
-              <a className='nav-link' href="/">Home</a>
+              <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='/documents'>Docs</a>
+              <Link to='/documents' className="nav-link">Docs</Link>
             </li>
             <li>
               <div className="d-inline-block dropdown-links dropdown" >
@@ -30,8 +31,8 @@ export default class Homepage extends Component {
                   Proposals
                 </button>
                 <div className={menuClass} aria-labelledby="proposalDropdown">
-                  <a className="dropdown-item" href="/proposals">Proposals</a>
-                  <a className="dropdown-item" >New Proposal</a>
+                  <Link to="/proposals" className="dropdown-item">Proposals</Link>
+                  <Link to="/proposal"className="dropdown-item">New Proposal</Link>
                 </div>
               </div>
             </li>
