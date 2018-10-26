@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NewProposalForm from '../../components/Proposal/NewProposalForm/NewProposalForm';
 import ProposalTemplate from '../../components/Proposal/ProposalTemplate/ProposalTemplate';
-import Button from '../../components/UI/Button/Button'; 
 
 class NewProposal extends Component {
   state = {
@@ -28,7 +27,6 @@ class NewProposal extends Component {
             <h2>Create a Proposal</h2>
             <NewProposalForm onChange={this.inputUpdate.bind(this)}
               />
-            <Button btnType="Success">Send Proposal </Button>
           </div>
         <div className="col-md-6">
           <ProposalTemplate 
