@@ -1,9 +1,10 @@
 import React from 'react';
-import classes from './Button.css';
+import CssModules from 'react-css-modules'
+import styles from './Button.css';
 
 const button = (props) => (
   <button
-    className={classes.Success}
+    className={styles.Success}
     onClick={props.clicked}
     >
     {props.children}
@@ -11,4 +12,4 @@ const button = (props) => (
 );
 
 
-export default button;
+export default CssModules(button);
