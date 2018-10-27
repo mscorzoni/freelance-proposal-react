@@ -25,23 +25,23 @@ class Documents extends Component {
 
   render() {
     return (
-            <div className="container">
-              {this.state.freelance_documents.map( freelance_document => {
-                return(
-                  <div className="card" key={freelance_document.id}>
-                    <img className="card-img-top" src={freelance_document.image_url} alt="Card cap" width="100%" />
-                    <div className="card-block">
-                      <h4 className="card-title">{freelance_document.title}</h4>
-                      <p className="card-text">{freelance_document.description}</p>
-                      <div>
-                        <a className="btn btn-lg btn-primary" href={freelance_document.file_url}>Download File</a>
-                      </div>
-                      <p className="cart-text"><small className="text-muted">Last updated: {freelance_document.updated_at }</small></p>
-                    </div>
+        <div className="container">
+          {this.state.freelance_documents.map( freelance_document => {
+            return(
+              <div className="card" key={freelance_document.id}>
+                <img className="card-img-top" src={freelance_document.image_url} alt="Card cap" width="100%" />
+                <div className="card-block">
+                  <h4 className="card-title">{freelance_document.title}</h4>
+                  <p className="card-text">{freelance_document.description}</p>
+                  <div>
+                    <a className="btn btn-lg btn-primary" href={freelance_document.file_url}>Download File</a>
                   </div>
-                  )
-              })}
-            </div>
+                  <p className="cart-text"><small className="text-muted">Last updated: {freelance_document.updated_at }</small></p>
+                </div>
+              </div>
+              )
+          })}
+        </div>
         )
   }
 }

@@ -31,8 +31,8 @@ export default class Navigation extends Component {
                   Proposals
                 </button>
                 <div className={menuClass} aria-labelledby="proposalDropdown">
-                  <Link to="/proposals" className="dropdown-item">Proposals</Link>
-                  <Link to="/proposal" className="dropdown-item">New Proposal</Link>
+                  <Link to="/proposals" className="dropdown-item" onClick={this.toggleOpen} >Proposals</Link>
+                  <Link to="/proposal" className="dropdown-item" onClick={this.toggleOpen} >New Proposal</Link>
                 </div>
               </div>
             </li>
