@@ -9,7 +9,8 @@ export default class Navigation extends Component {
   state = { isOpen: false };
 
   toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
-
+  
+  toggleDisable = () => this.setState({isOpen: false});
 
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
@@ -20,10 +21,10 @@ export default class Navigation extends Component {
           <ul className='nav'>
             <li className='nav-item'>
 
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/" className="nav-link" onClick={this.toggleDisable}>Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to='/documents' className="nav-link">Docs</Link>
+              <Link to='/documents' className="nav-link" onClick={this.toggleDisable}>Docs</Link>
             </li>
             <li>
               <div className="d-inline-block dropdown-links dropdown" >
