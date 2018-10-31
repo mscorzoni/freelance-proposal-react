@@ -4,7 +4,7 @@ import NewProposalForm from '../../components/Proposal/NewProposalForm/NewPropos
 import ProposalTemplate from '../../components/Proposal/ProposalTemplate/ProposalTemplate';
 import Button from '../../components/UI/Button/Button';
 import './NewProposal.css';
-import axios from '../../axios-proposal';
+import axios from 'axios';
 
 class NewProposal extends Component {
   state = {
@@ -23,7 +23,7 @@ class NewProposal extends Component {
 
   proposalHandler = (event) => {
     event.preventDefault();
-    const proposal = {
+    const proposals = {
       customer: this.state.customer,
       portfolio_url: this.state.portfolio_url,
       tools: this.state.tools,
@@ -31,12 +31,10 @@ class NewProposal extends Component {
       hourly_rate: this.state.hourly_rate,
       weeks_to_complete: this.state.weeks_to_complete,
       client_email: this.state.client_email
-
     }
-    axios.post('./proposals.json', proposal)
+    axios.post('http://localhost:3001/api/v1/proposals.json', proposals)
       .then(response => {
         console.log(response.data);
-        this.props.history.push('/newproposal');
       })
       .catch(error => console.log(error));
   }

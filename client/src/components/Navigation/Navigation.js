@@ -20,7 +20,6 @@ export default class Navigation extends Component {
         <div className='container'>
           <ul className='nav'>
             <li className='nav-item'>
-
               <Link to="/" className="nav-link" onClick={this.toggleDisable}>Home</Link>
             </li>
             <li className='nav-item'>
@@ -40,7 +39,6 @@ export default class Navigation extends Component {
           </ul>
         </div>
       </nav>
-
     );
   }
 }
