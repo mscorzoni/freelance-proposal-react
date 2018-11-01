@@ -1,15 +1,14 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Proposal.css';
 
-const proposal = (props) => (
-  <ul>
-    <li> Customer: {props.customer}</li>
-    <li> Portfolio_url: {props.portfolio_url}</li>
-    <li> Tools: {props.tools}</li>
-    <li> Estimated_hours: {props.estimated_hours}</li>
-    <li> Hourly_rate: {props.hourly_rate}</li>
-    <li> Weeks_to_complete: {props.weeks_to_complete}</li>
-    <li> Client_email: {props.client_email}</li>
-  </ul>
-);
+const proposal = ({proposal}) => {
+  return (
+    <div className="list-group-item" key={proposal.id}>
+      <h5 className="list-group-item">{proposal.customer}</h5>
+      <p className="list-group-item-text"> {proposal.hourly_rate * proposal.estimated_hours}</p>
+    </div>
+  );
+};
 
 export default proposal;

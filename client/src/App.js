@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import Proposals from './components/proposals';
 import Documents from './components/documents';
 import NewProposal from './containers/NewProposal/NewProposal';
 import Homepage from './components/Homepage/Homepage';
+import Proposals from './containers/Proposals/Proposals';
 
 class App extends Component {
 
