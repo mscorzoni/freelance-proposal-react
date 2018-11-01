@@ -23,7 +23,7 @@ class NewProposal extends Component {
 
   proposalHandler = (event) => {
     event.preventDefault();
-    const proposals = {
+    const proposal = {
       customer: this.state.customer,
       portfolio_url: this.state.portfolio_url,
       tools: this.state.tools,
@@ -32,7 +32,7 @@ class NewProposal extends Component {
       weeks_to_complete: this.state.weeks_to_complete,
       client_email: this.state.client_email
     }
-    axios.post('http://localhost:3001/api/v1/proposals.json', proposals)
+    axios.post('http://localhost:3001/api/v1/proposals.json', proposal)
       .then(response => {
         console.log(response.data);
       })
@@ -45,7 +45,7 @@ class NewProposal extends Component {
         <div className="row">
           <div className="col-md-6">
             <h2>Create a Proposal</h2>
-            <NewProposalForm onChange={this.inputUpdate.bind(this)}
+            <NewProposalForm onChange={this.inputUpdate}
               />
             <Button btnType="btn btn-primary" clicked={this.proposalHandler} >Send Proposal</Button>
           </div>

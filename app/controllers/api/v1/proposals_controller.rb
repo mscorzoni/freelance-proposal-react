@@ -4,7 +4,7 @@ module Api::V1
 
     # GET /proposals
     def index
-      @proposals = Proposal.all
+      @proposals = Proposal.order('created_at DESC')
 
       render json: @proposals
     end
@@ -19,9 +19,9 @@ module Api::V1
       @proposal = Proposal.new(proposal_params)
 
       if @proposal.save
-        render json: @proposal, status: :created, location: @proposal
+        render json: @proposal
       else
-        render json: @proposal.errors, status: :unprocessable_entity
+        render json: @proposal.errors
       end
     end
 
