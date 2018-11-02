@@ -54,3 +54,8 @@ body {
 .nav-item {
  color: white;
 }
+
+.icon {
+  color: #1f2074 !important;
+  cursor: pointer;
+}

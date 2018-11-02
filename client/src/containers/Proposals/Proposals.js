@@ -17,6 +17,17 @@ class Proposals extends Component {
       .catch(error => console.log(error))
   }
 
+  deleteProposal = (id) => {
+    axios.delete(`http://localhost:3001/api/v1/proposals/${id}`)
+      .then(response => {
+        const proposals = this.state.proposals.filter(
+          proposal => proposal.id !== id
+        )
+        this.setState({proposals: proposals})
+      })
+      .catch(error => console.log(error))
+  }
+
   render() {
     return (
       <div className="container">
@@ -26,7 +37,7 @@ class Proposals extends Component {
           </span>
           {this.state.proposals.map((proposal) => {
             return (
-              <Proposal proposal={proposal} key={proposal.id} />
+              <Proposal proposal={proposal} key={proposal.id} deleteProposal={this.deleteProposal} />
             )
           })}
         </div>
