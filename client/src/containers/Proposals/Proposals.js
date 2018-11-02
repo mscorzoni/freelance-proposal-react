@@ -21,9 +21,9 @@ class Proposals extends Component {
     return (
       <div className="container">
         <div className="list-group card-list">
-          <a className="list-group-item list-group-item-action active">
+          <span className="list-group-item list-group-item-action active">
             <h1 className="headline">Proposals</h1>
-          </a>
+          </span>
           {this.state.proposals.map((proposal) => {
             return (
               <Proposal proposal={proposal} key={proposal.id} />
